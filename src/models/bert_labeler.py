@@ -19,7 +19,7 @@ class bert_labeler(nn.Module):
         elif clinical:
             self.bert = AutoModel.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
         else:
-            self.bert = BertModel.from_pretrained('bert-base-uncased')
+            self.bert = BertModel.from_pretrained('/home/dengyi/link-to-code/CheXbert/src/')
             
         if freeze_embeddings:
             for param in self.bert.embeddings.parameters():
